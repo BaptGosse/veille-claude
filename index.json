@@ -18,6 +18,41 @@
    "titre": "Modèle de fiche"
   }
  ],
+ "revues": [
+  {
+   "chemin": "revue/2026-11-12_ou-peut-tourner-un-modele.md",
+   "titre": "Où peut tourner un modèle Claude, et ce que ça coûte de choisir",
+   "date": "2026-11-12",
+   "auteur": "Baptiste Gosselin",
+   "axe": "Modèles",
+   "tags": [
+    "hebergement",
+    "tarification"
+   ],
+   "resume": "Quand on monte une plateforme pour une entreprise qui ne veut pas que ses données partent n'importe où, la première question n'est pas de savoir quel modèle est le meilleur. C'est de savoir où il s'exécute. J'ai passé la journée dans la doc"
+  },
+  {
+   "chemin": "revue/2026-11-12_messages-canal.md",
+   "titre": "Messages du canal",
+   "date": "2026-11-12",
+   "auteur": "Baptiste Gosselin",
+   "axe": "Modèles",
+   "tags": [],
+   "resume": "Le dispositif prévoit qu'une information retenue part le jour même sur le canal de groupe, une phrase et le lien. On garde une copie ici, ça fait la trace de la diffusion."
+  },
+  {
+   "chemin": "revue/2026-11-12_lire-une-annonce-de-modele.md",
+   "titre": "Comment lire une annonce de modèle sans se faire avoir",
+   "date": "2026-11-12",
+   "auteur": "Baptiste Gosselin",
+   "axe": "Modèles",
+   "tags": [
+    "evaluation",
+    "version"
+   ],
+   "resume": "Quatre modèles sont sortis entre le 22 septembre et le 9 novembre. J'ai lu les quatre annonces en entier, en cherchant uniquement ce qui est vérifiable. Voici ce que j'en retire, et surtout comment je les lirai la prochaine fois."
+  }
+ ],
  "axes": [
   {
    "dossier": "01-modeles",

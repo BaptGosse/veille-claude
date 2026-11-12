@@ -170,7 +170,16 @@ button:hover{background:var(--surlignage)}
   }
 
   function construireNav() {
-    var h = '<div class="groupe">Le dépôt</div>';
+    var h = "";
+    if ((sommaire.revues || []).length) {
+      h += '<div class="groupe">Revue de veille</div>';
+      sommaire.revues.forEach(function (a) {
+        h += '<a class="fiche" href="#/' + a.chemin + '">' +
+             '<span class="jour">' + echappe(a.date.slice(5)) + "</span>" +
+             echappe(a.titre) + "</a>";
+      });
+    }
+    h += '<div class="groupe">Le dépôt</div>';
     sommaire.communs.forEach(function (p) {
       h += '<a href="#/' + p.chemin + '">' + echappe(p.titre) + "</a>";
     });
@@ -197,6 +206,12 @@ button:hover{background:var(--surlignage)}
   }
 
   function trouverFiche(chemin) {
+    var revues = sommaire.revues || [];
+    for (var k = 0; k < revues.length; k++) {
+      if (revues[k].chemin === chemin) {
+        return { fiche: revues[k], axe: { titre: "Revue de veille" }, revue: true };
+      }
+    }
     for (var i = 0; i < sommaire.axes.length; i++) {
       var a = sommaire.axes[i];
       for (var j = 0; j < a.fiches.length; j++) {
@@ -208,6 +223,8 @@ button:hover{background:var(--surlignage)}
 
   function bandeau(f) {
     var h = '<div class="meta"><b class="date">' + echappe(f.date) + "</b>";
+    if (f.auteur) h += '<span class="puce">' + echappe(f.auteur) + "</span>";
+    if (f.axe && f.auteur) h += '<span class="puce">axe ' + echappe(f.axe) + "</span>";
     if (f.type) h += '<span class="puce">' + echappe(f.type) + "</span>";
     if (f.fiabilite) h += '<span class="puce">fiabilité ' + echappe(f.fiabilite) + "</span>";
     (f.tags || []).forEach(function (t) {
@@ -237,7 +254,7 @@ button:hover{background:var(--surlignage)}
         if (trouve) {
           texte = texte.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, "");
           entete = bandeau(trouve.fiche);
-          fil.textContent = trouve.axe.titre + " · fiche";
+          fil.textContent = trouve.axe.titre + (trouve.revue ? "" : " · fiche");
           if (!/^#\s/m.test(texte)) {
             texte = "# " + trouve.fiche.titre + "\n\n" + texte;
           }

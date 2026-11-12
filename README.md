@@ -6,6 +6,13 @@ fonctionnement sont reprises dans `principes.md`.
 
 Dépôt mis en place le 12 novembre 2026.
 
+## La revue
+
+`revue/` contient les articles écrits pour être lus par quelqu'un qui n'a pas suivi la
+veille, et la copie des messages postés sur le canal du groupe. C'est la partie diffusion
+du dispositif. Les fiches des axes sont des notes de travail, la revue est ce qu'on
+partage.
+
 ## Les cinq axes
 
 | Dossier | Axe | Membre |

@@ -69,11 +69,38 @@ def resume(texte):
     return " ".join(m.group(1).split()) if m else ""
 
 
-sommaire = {"genere": None, "communs": [], "axes": []}
+sommaire = {"genere": None, "communs": [], "revues": [], "axes": []}
 
 for nom, libelle in COMMUNS:
     if os.path.exists(os.path.join(RACINE, nom)):
         sommaire["communs"].append({"chemin": nom, "titre": libelle})
+
+# la revue : les articles destines a etre lus, par date decroissante
+drevue = os.path.join(RACINE, "revue")
+if os.path.isdir(drevue):
+    for nom in sorted(os.listdir(drevue), reverse=True):
+        if not nom.endswith(".md"):
+            continue
+        texte = lire("revue/" + nom)
+        champs = entete(texte)
+        corps = ENTETE.sub("", texte)
+        m = re.search(r"^#\s+(.+)$", corps, re.M)
+        apres = corps[m.end():] if m else corps
+        intro = ""
+        for bloc in apres.split("\n\n"):
+            bloc = bloc.strip()
+            if bloc and not bloc.startswith("#"):
+                intro = " ".join(bloc.split())
+                break
+        sommaire["revues"].append({
+            "chemin": "revue/" + nom,
+            "titre": m.group(1).strip() if m else nom[:-3],
+            "date": champs.get("date", ""),
+            "auteur": champs.get("auteur", ""),
+            "axe": champs.get("axe", ""),
+            "tags": champs.get("tags", []),
+            "resume": intro[:240],
+        })
 
 for dossier, libelle, membre in AXES:
     chemin = os.path.join(RACINE, dossier)
@@ -114,4 +141,5 @@ with open(os.path.join(RACINE, "index.json"), "w", encoding="utf-8") as f:
     json.dump(sommaire, f, ensure_ascii=False, indent=1)
     f.write("\n")
 
-print("index.json écrit :", len(sommaire["axes"]), "axes,", total, "fiches")
+print("index.json écrit :", len(sommaire["axes"]), "axes,", total, "fiches,",
+      len(sommaire["revues"]), "articles de revue")
