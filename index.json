@@ -54,6 +54,92 @@
      ],
      "lien": "",
      "resume": "Les release notes datent au 9 novembre 2026 l'arrivée de deux modèles, Fable 5.2 et Mythos 5.2, mais la liste officielle des modèles lue le même jour n'en montre qu'un."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_sonnet-4-5-retire-le-30-novembre.md",
+     "titre": "sonnet 4 5 retire le 30 novembre",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "version"
+     ],
+     "lien": "claude-code",
+     "resume": "Sonnet 4.5 est retiré le 30 novembre 2026, dans dix-huit jours, et trois paramètres d'API ont déjà disparu dans la version du 21 octobre."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_six-voies-de-deploiement.md",
+     "titre": "six voies de deploiement",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "hebergement"
+     ],
+     "lien": "mcp",
+     "resume": "Il existe six façons de faire tourner un modèle Claude, elles ne se valent pas sur la question de savoir qui est responsable de traitement, et aucune page ne les récapitule."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_retention-30-jours-et-zdr.md",
+     "titre": "retention 30 jours et zdr",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "hebergement",
+      "version"
+     ],
+     "lien": "",
+     "resume": "Choisir le modèle le plus capable fait perdre la non-conservation des données, parce que Fable et Mythos imposent trente jours de rétention et sont exclus du zero data retention."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_mythos-5-2-acces-restreint.md",
+     "titre": "mythos 5 2 acces restreint",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "version"
+     ],
+     "lien": "",
+     "resume": "Mythos 5.2 est bien dans la documentation, c'est le même modèle que Fable 5.2 sans certaines protections, réservé aux organisations vérifiées, et ma question de ce matin venait d'avoir lu le mauvais tableau."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_lire-un-score-publie.md",
+     "titre": "lire un score publie",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "evaluation"
+     ],
+     "lien": "agents",
+     "resume": "Un score publié ne veut rien dire tant qu'on ne connaît pas le niveau d'effort et le harnais, au point que le même modèle affiche des résultats différents selon l'annonce qui le cite."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_ce-qui-change-entre-versions.md",
+     "titre": "ce qui change entre versions",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "version",
+      "tarification"
+     ],
+     "lien": "claude-code",
+     "resume": "Sur les quatre sorties des sept dernières semaines, ce qui change vraiment et se vérifie tient en deux lignes par modèle, le prix et la vitesse, le reste est qualitatif."
+    },
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_aucune-region-europeenne.md",
+     "titre": "aucune region europeenne",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "hebergement"
+     ],
+     "lien": "mcp",
+     "resume": "La documentation ne propose que deux zones d'exécution, mondiale ou États-Unis, et aucune région européenne, ce qui répond par la négative à la question la plus importante de mon axe."
     }
    ]
   },
@@ -138,5 +224,5 @@
    "fiches": []
   }
  ],
- "total_fiches": 1
+ "total_fiches": 8
 }

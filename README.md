@@ -24,7 +24,7 @@ retenue, et `synthese.md` complétée au fil de l'eau.
 
 | Axe | Sources listées | Fiches | Synthèse |
 | --- | --- | --- | --- |
-| Modèles | oui | 1 | commencée |
+| Modèles | oui | 8 | à jour au 12/11/2026 |
 | Skills | à faire | 0 | vide |
 | Agents | à faire | 0 | vide |
 | Claude Code | à faire | 0 | vide |
@@ -38,6 +38,7 @@ sources listées, il n'a rien à trier.
 | Quand | Quoi |
 | --- | --- |
 | 12 novembre 2026 | mise en place du dépôt, arborescence et règles communes |
+| 12 novembre 2026 | premier cycle complet sur l'axe Modèles, sept fiches |
 | semaine du 17 novembre | chacun remplit son `sources.md` et branche ses flux |
 | à partir du 24 novembre | le cycle tourne, une fiche minimum par semaine et par personne |
 | fin de chaque mois | consolidation des synthèses et relecture croisée |
