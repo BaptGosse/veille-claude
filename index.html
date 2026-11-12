@@ -189,6 +189,7 @@ button:hover{background:var(--surlignage)}
       a.pages.forEach(function (p) {
         var court = p.chemin.split("/").pop().replace(".md", "");
         var noms = { synthese: "Synthèse", comparatif: "Comparatif",
+                     "grille-evaluation": "Grille d'évaluation",
                      sources: "Sources", glossaire: "Glossaire" };
         h += '<a href="#/' + p.chemin + '">' + (noms[court] || echappe(court)) + "</a>";
       });

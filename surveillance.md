@@ -47,3 +47,26 @@ bruit et qui décide de ce qui cesse de fonctionner.
 
 La page de résidence des données y entre aussi. Elle porte la liste des zones d'exécution
 disponibles, et c'est sur cette liste qu'on attend un changement.
+
+## Ajouté pour les axes Skills et Agents
+
+Aucune de ces pages n'a de flux. Elles passent toutes en surveillance de page.
+
+| Page | URL | Qui la surveille |
+| --- | --- | --- |
+| Spécification Agent Skills | https://agentskills.io/specification.md | Skills |
+| Documentation Agent Skills | https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview | Skills |
+| Commits du dépôt de référence | https://github.com/anthropics/skills | Skills |
+| Organisation de la fondation | https://github.com/agentskills/agentskills | Skills |
+| Orchestration multi-agents | https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration | Agents |
+| Politiques de permission | https://platform.claude.com/docs/en/managed-agents/permission-policies | Agents |
+| Budgets des sessions | https://platform.claude.com/docs/en/managed-agents/budgets | Agents |
+
+Deux remarques pour le point de groupe.
+
+La spécification des skills n'a ni numéro de version ni changelog. Une surveillance de
+page est donc le seul moyen de savoir qu'elle a changé.
+
+Le flux Atom des releases du dépôt `anthropics/skills` est valide mais vide, aucune
+release n'a jamais été publiée. Il reste dans `veille.opml` au cas où, mais il ne faut
+rien en attendre pour l'instant. Ce sont les commits qu'il faut regarder.

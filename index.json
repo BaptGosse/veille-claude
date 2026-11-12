@@ -188,6 +188,10 @@
      "titre": "Synthèse - Skills"
     },
     {
+     "chemin": "02-skills/grille-evaluation.md",
+     "titre": "Grille d'évaluation d'une skill tierce"
+    },
+    {
      "chemin": "02-skills/sources.md",
      "titre": "Sources suivies - Skills"
     },
@@ -196,7 +200,59 @@
      "titre": "Glossaire - Skills"
     }
    ],
-   "fiches": []
+   "fiches": [
+    {
+     "chemin": "02-skills/fiches/2026-11-12_skills-passees-a-la-linux-foundation.md",
+     "titre": "skills passees a la linux foundation",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "format",
+      "annuaire"
+     ],
+     "lien": "",
+     "resume": "Anthropic a donné le standard Agent Skills à l'Agentic AI Foundation, sous la Linux Foundation, le 22 octobre 2026, et ça répond à ma question sur qui structure l'écosystème."
+    },
+    {
+     "chemin": "02-skills/fiches/2026-11-12_ou-regarder-pour-les-skills.md",
+     "titre": "ou regarder pour les skills",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "annuaire",
+      "format"
+     ],
+     "lien": "mcp",
+     "resume": "Il n'existe pas d'annuaire public de skills tierces que j'aie pu vérifier, et aucun flux ne couvre l'écosystème, donc la surveillance passe par deux dépôts GitHub et un Discord."
+    },
+    {
+     "chemin": "02-skills/fiches/2026-11-12_juger-une-skill-tierce.md",
+     "titre": "juger une skill tierce",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "securite",
+      "evaluation"
+     ],
+     "lien": "claude-code",
+     "resume": "La recommandation officielle est de n'installer que des skills de sources connues, et quand on regarde ce qu'une skill peut faire, on comprend pourquoi."
+    },
+    {
+     "chemin": "02-skills/fiches/2026-11-12_ce-quil-y-a-dans-une-skill.md",
+     "titre": "ce quil y a dans une skill",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "format"
+     ],
+     "lien": "",
+     "resume": "La spécification tient en six champs dont deux obligatoires, elle décrit un chargement en trois niveaux, et elle n'a ni numéro de version ni changelog."
+    }
+   ]
   },
   {
    "dossier": "03-agents",
@@ -216,7 +272,60 @@
      "titre": "Glossaire - Agents"
     }
    ],
-   "fiches": []
+   "fiches": [
+    {
+     "chemin": "03-agents/fiches/2026-11-12_orchestration-et-sous-agents.md",
+     "titre": "orchestration et sous agents",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "orchestration",
+      "sous-agent"
+     ],
+     "lien": "claude-code",
+     "resume": "Trois façons de faire travailler plusieurs agents ensemble, trois schémas qui marchent, et des limites chiffrées que je ne connaissais pas."
+    },
+    {
+     "chemin": "03-agents/fiches/2026-11-12_evaluer-un-agent.md",
+     "titre": "evaluer un agent",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "evaluation",
+      "garde-fou"
+     ],
+     "lien": "modeles",
+     "resume": "Évaluer un agent n'est pas évaluer un modèle, et la différence tient dans une métrique : réussir une fois sur trois essais n'est pas la même chose que réussir trois fois sur trois."
+    },
+    {
+     "chemin": "03-agents/fiches/2026-11-12_contenir-un-agent.md",
+     "titre": "contenir un agent",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "garde-fou",
+      "orchestration"
+     ],
+     "lien": "mcp",
+     "resume": "Deux mécanismes existent pour contenir un agent, les politiques de permission et les budgets, et tous les deux ont une formulation piégeuse qu'il faut avoir lue."
+    },
+    {
+     "chemin": "03-agents/fiches/2026-11-12_agent-ou-script.md",
+     "titre": "agent ou script",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "orchestration",
+      "evaluation"
+     ],
+     "lien": "",
+     "resume": "Le critère officiel est de prendre la solution la plus simple possible et de n'ajouter de la complexité que quand elle est nécessaire, et un agent n'est justifié que quand on ne peut pas prévoir le nombre d'étapes."
+    }
+   ]
   },
   {
    "dossier": "04-claude-code",
@@ -259,5 +368,5 @@
    "fiches": []
   }
  ],
- "total_fiches": 8
+ "total_fiches": 16
 }

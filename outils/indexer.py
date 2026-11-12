@@ -108,7 +108,8 @@ for dossier, libelle, membre in AXES:
         continue
     bloc = {"dossier": dossier, "titre": libelle, "membre": membre,
             "pages": [], "fiches": []}
-    for nom in ("synthese.md", "comparatif.md", "sources.md", "glossaire.md"):
+    for nom in ("synthese.md", "comparatif.md", "grille-evaluation.md",
+                "sources.md", "glossaire.md"):
         if os.path.exists(os.path.join(chemin, nom)):
             texte = lire(os.path.join(dossier, nom))
             bloc["pages"].append({"chemin": f"{dossier}/{nom}",
