@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Veille Claude - Groupe 5 TD1</title>
+    <dateCreated>2026-11-12</dateCreated>
+  </head>
+  <body>
+    <outline text="Veille Claude" title="Veille Claude">
+      <outline type="rss" text="claude-code (releases)"
+               title="claude-code (releases)"
+               xmlUrl="https://github.com/anthropics/claude-code/releases.atom"
+               htmlUrl="https://github.com/anthropics/claude-code/releases"/>
+      <outline type="rss" text="anthropic-sdk-python (releases)"
+               title="anthropic-sdk-python (releases)"
+               xmlUrl="https://github.com/anthropics/anthropic-sdk-python/releases.atom"
+               htmlUrl="https://github.com/anthropics/anthropic-sdk-python/releases"/>
+      <outline type="rss" text="modelcontextprotocol/servers (releases)"
+               title="modelcontextprotocol/servers (releases)"
+               xmlUrl="https://github.com/modelcontextprotocol/servers/releases.atom"
+               htmlUrl="https://github.com/modelcontextprotocol/servers/releases"/>
+      <outline type="rss" text="anthropics/skills (releases)"
+               title="anthropics/skills (releases)"
+               xmlUrl="https://github.com/anthropics/skills/releases.atom"
+               htmlUrl="https://github.com/anthropics/skills/releases"/>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille Claude</title>
+<meta name="description" content="Veille technologique du groupe 5, TD1, R5.03 Politique de communication.">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<style>
+:root{
+  --fond:#fbfaf8; --fond-barre:#f3f1ec; --encre:#1b1a18; --encre-pale:#6b6760;
+  --trait:#dedad2; --lien:#8a4b2a; --surlignage:#f0ece3; --code-fond:#f3f1ec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --fond:#17161a; --fond-barre:#1e1d22; --encre:#e8e6e1; --encre-pale:#9a958c;
+    --trait:#302e35; --lien:#d79a6e; --surlignage:#26242b; --code-fond:#201f25;
+  }
+}
+:root[data-theme="dark"]{
+  --fond:#17161a; --fond-barre:#1e1d22; --encre:#e8e6e1; --encre-pale:#9a958c;
+  --trait:#302e35; --lien:#d79a6e; --surlignage:#26242b; --code-fond:#201f25;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--fond); color:var(--encre);
+  font:16px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+}
+a{color:var(--lien)}
+
+/* ---------- ossature ---------- */
+.appli{display:flex; min-height:100vh}
+.cote{
+  width:290px; flex:0 0 290px; background:var(--fond-barre);
+  border-right:1px solid var(--trait); padding:22px 0 40px;
+  position:sticky; top:0; height:100vh; overflow-y:auto;
+}
+.page{flex:1; min-width:0; padding:40px 16px 80px; display:flex; justify-content:center}
+.feuille{width:100%; max-width:720px}
+
+/* ---------- barre latérale ---------- */
+.marque{padding:0 20px 18px; border-bottom:1px solid var(--trait); margin-bottom:14px}
+.marque h1{font-size:19px; margin:0 0 4px; letter-spacing:-.01em}
+.marque p{margin:0; font-size:12.5px; color:var(--encre-pale); line-height:1.45}
+.groupe{padding:14px 20px 4px; font-size:11px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--encre-pale)}
+.groupe span{text-transform:none; letter-spacing:0; font-size:11.5px; opacity:.8}
+nav a{
+  display:block; padding:5px 20px 5px 20px; font-size:14px; text-decoration:none;
+  color:var(--encre); border-left:3px solid transparent; line-height:1.4;
+}
+nav a:hover{background:var(--surlignage)}
+nav a.ici{border-left-color:var(--lien); background:var(--surlignage); font-weight:600}
+nav a.fiche{padding-left:30px; font-size:13px; color:var(--encre-pale)}
+nav a.fiche .jour{font-variant-numeric:tabular-nums; opacity:.75; margin-right:5px}
+nav a.fiche.ici{color:var(--encre)}
+.vide{padding:4px 20px 4px 30px; font-size:12.5px; color:var(--encre-pale); font-style:italic}
+
+/* ---------- contenu ---------- */
+.fil{font-size:12.5px; color:var(--encre-pale); margin:0 0 18px; letter-spacing:.02em}
+.contenu h1{font-size:30px; line-height:1.2; margin:0 0 20px; letter-spacing:-.02em}
+.contenu h2{font-size:21px; margin:34px 0 10px; letter-spacing:-.01em}
+.contenu h3{font-size:17px; margin:26px 0 8px}
+.contenu p{margin:0 0 14px}
+.contenu ul,.contenu ol{margin:0 0 14px; padding-left:22px}
+.contenu li{margin-bottom:5px}
+.contenu hr{border:0; border-top:1px solid var(--trait); margin:28px 0}
+.contenu blockquote{margin:0 0 14px; padding-left:16px; border-left:3px solid var(--trait);
+  color:var(--encre-pale)}
+.contenu code{
+  font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:.86em;
+  background:var(--code-fond); padding:1px 5px; border-radius:3px;
+}
+.contenu pre{
+  background:var(--code-fond); border:1px solid var(--trait); border-radius:5px;
+  padding:14px 16px; overflow-x:auto; margin:0 0 16px;
+}
+.contenu pre code{background:none; padding:0; font-size:13px; line-height:1.5}
+.contenu table{border-collapse:collapse; width:100%; margin:0 0 18px; font-size:14px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.contenu th,.contenu td{border:1px solid var(--trait); padding:7px 10px;
+  text-align:left; vertical-align:top}
+.contenu th{background:var(--surlignage); font-weight:600}
+.contenu strong{font-weight:700}
+
+/* ---------- bandeau d'une fiche ---------- */
+.meta{
+  display:flex; flex-wrap:wrap; gap:7px; align-items:center;
+  padding:11px 14px; margin:0 0 26px; background:var(--surlignage);
+  border:1px solid var(--trait); border-radius:5px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:12.5px;
+}
+.meta b{font-weight:600}
+.puce{border:1px solid var(--trait); background:var(--fond); border-radius:20px;
+  padding:1px 9px; color:var(--encre-pale)}
+.meta .date{font-variant-numeric:tabular-nums}
+
+.outils{display:flex; gap:10px; align-items:center; margin-bottom:26px}
+button{
+  font:inherit; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:13px;
+  background:var(--fond-barre); color:var(--encre); border:1px solid var(--trait);
+  border-radius:5px; padding:5px 11px; cursor:pointer;
+}
+button:hover{background:var(--surlignage)}
+.menu{display:none}
+
+@media (max-width:860px){
+  .appli{display:block}
+  .cote{position:static; width:auto; height:auto; border-right:0;
+    border-bottom:1px solid var(--trait); display:none}
+  .cote.ouvert{display:block}
+  .page{padding:22px 16px 60px}
+  .menu{display:inline-block}
+  .contenu h1{font-size:25px}
+}
+</style>
+</head>
+<body>
+<div class="appli">
+  <aside class="cote" id="cote">
+    <div class="marque">
+      <h1>Veille Claude</h1>
+      <p>Groupe 5, TD1 · R5.03 Politique de communication</p>
+    </div>
+    <nav id="nav"></nav>
+  </aside>
+  <main class="page">
+    <div class="feuille">
+      <div class="outils">
+        <button class="menu" id="btn-menu">Sommaire</button>
+        <button id="btn-theme">Thème</button>
+      </div>
+      <p class="fil" id="fil"></p>
+      <div class="contenu" id="contenu"><p>Chargement.</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.2/marked.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var nav = document.getElementById("nav");
+  var contenu = document.getElementById("contenu");
+  var fil = document.getElementById("fil");
+  var cote = document.getElementById("cote");
+  var sommaire = null;
+
+  try {
+    var t = localStorage.getItem("theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+
+  document.getElementById("btn-theme").onclick = function () {
+    var r = document.documentElement;
+    var sombre = getComputedStyle(document.body).backgroundColor === "rgb(23, 22, 26)";
+    var suivant = sombre ? "light" : "dark";
+    r.setAttribute("data-theme", suivant);
+    try { localStorage.setItem("theme", suivant); } catch (e) {}
+  };
+  document.getElementById("btn-menu").onclick = function () {
+    cote.classList.toggle("ouvert");
+  };
+
+  function echappe(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function construireNav() {
+    var h = '<div class="groupe">Le dépôt</div>';
+    sommaire.communs.forEach(function (p) {
+      h += '<a href="#/' + p.chemin + '">' + echappe(p.titre) + "</a>";
+    });
+    sommaire.axes.forEach(function (a) {
+      h += '<div class="groupe">' + echappe(a.titre) +
+           " <span>" + echappe(a.membre) + "</span></div>";
+      a.pages.forEach(function (p) {
+        var court = p.chemin.split("/").pop().replace(".md", "");
+        var noms = { synthese: "Synthèse", comparatif: "Comparatif",
+                     sources: "Sources", glossaire: "Glossaire" };
+        h += '<a href="#/' + p.chemin + '">' + (noms[court] || echappe(court)) + "</a>";
+      });
+      if (a.fiches.length) {
+        a.fiches.forEach(function (f) {
+          h += '<a class="fiche" href="#/' + f.chemin + '">' +
+               '<span class="jour">' + echappe(f.date.slice(5)) + "</span>" +
+               echappe(f.titre) + "</a>";
+        });
+      } else {
+        h += '<div class="vide">aucune fiche</div>';
+      }
+    });
+    nav.innerHTML = h;
+  }
+
+  function trouverFiche(chemin) {
+    for (var i = 0; i < sommaire.axes.length; i++) {
+      var a = sommaire.axes[i];
+      for (var j = 0; j < a.fiches.length; j++) {
+        if (a.fiches[j].chemin === chemin) return { fiche: a.fiches[j], axe: a };
+      }
+    }
+    return null;
+  }
+
+  function bandeau(f) {
+    var h = '<div class="meta"><b class="date">' + echappe(f.date) + "</b>";
+    if (f.type) h += '<span class="puce">' + echappe(f.type) + "</span>";
+    if (f.fiabilite) h += '<span class="puce">fiabilité ' + echappe(f.fiabilite) + "</span>";
+    (f.tags || []).forEach(function (t) {
+      h += '<span class="puce">' + echappe(t) + "</span>";
+    });
+    if (f.lien) h += '<span class="puce">voir aussi ' + echappe(f.lien) + "</span>";
+    return h + "</div>";
+  }
+
+  function afficher() {
+    var chemin = location.hash.replace(/^#\/?/, "") || "README.md";
+    if (chemin.indexOf("..") !== -1 || !/\.md$/.test(chemin)) chemin = "README.md";
+
+    Array.prototype.forEach.call(nav.querySelectorAll("a"), function (a) {
+      a.classList.toggle("ici", a.getAttribute("href") === "#/" + chemin);
+    });
+    cote.classList.remove("ouvert");
+
+    fetch(chemin, { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.text();
+      })
+      .then(function (texte) {
+        var trouve = trouverFiche(chemin);
+        var entete = "";
+        if (trouve) {
+          texte = texte.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, "");
+          entete = bandeau(trouve.fiche);
+          fil.textContent = trouve.axe.titre + " · fiche";
+          if (!/^#\s/m.test(texte)) {
+            texte = "# " + trouve.fiche.titre + "\n\n" + texte;
+          }
+        } else {
+          var dossier = chemin.indexOf("/") !== -1 ? chemin.split("/")[0] : "";
+          var axe = sommaire.axes.filter(function (a) { return a.dossier === dossier; })[0];
+          fil.textContent = axe ? axe.titre + " · " + axe.membre : "Le dépôt";
+        }
+        var html = marked.parse(texte);
+        var titre = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+        if (titre && entete) {
+          html = html.replace(titre[0], titre[0] + entete);
+        } else {
+          html = entete + html;
+        }
+        contenu.innerHTML = html;
+        document.title = (contenu.querySelector("h1") || {}).textContent || "Veille Claude";
+        window.scrollTo(0, 0);
+      })
+      .catch(function () {
+        fil.textContent = "";
+        contenu.innerHTML = "<h1>Page introuvable</h1><p>Le fichier <code>" +
+          echappe(chemin) + "</code> n'existe pas dans le dépôt, ou " +
+          "<code>index.json</code> n'est plus à jour. Relancer " +
+          "<code>python3 outils/indexer.py</code> et commiter.</p>";
+      });
+  }
+
+  fetch("index.json", { cache: "no-cache" })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      sommaire = d;
+      construireNav();
+      afficher();
+      window.addEventListener("hashchange", afficher);
+    })
+    .catch(function () {
+      contenu.innerHTML = "<h1>Sommaire absent</h1><p>Le fichier <code>index.json</code> " +
+        "n'a pas pu être chargé. Le générer avec <code>python3 outils/indexer.py</code>.</p>";
+    });
+})();
+</script>
+</body>
+</html>

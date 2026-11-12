@@ -1,0 +1,142 @@
+{
+ "genere": "2026-11-12",
+ "communs": [
+  {
+   "chemin": "README.md",
+   "titre": "Présentation"
+  },
+  {
+   "chemin": "principes.md",
+   "titre": "Règles communes"
+  },
+  {
+   "chemin": "surveillance.md",
+   "titre": "Sources sans flux"
+  },
+  {
+   "chemin": "modele-fiche.md",
+   "titre": "Modèle de fiche"
+  }
+ ],
+ "axes": [
+  {
+   "dossier": "01-modeles",
+   "titre": "Modèles",
+   "membre": "Baptiste Gosselin",
+   "pages": [
+    {
+     "chemin": "01-modeles/synthese.md",
+     "titre": "Synthèse - Modèles"
+    },
+    {
+     "chemin": "01-modeles/comparatif.md",
+     "titre": "Comparatif des modèles"
+    },
+    {
+     "chemin": "01-modeles/sources.md",
+     "titre": "Sources suivies - Modèles"
+    },
+    {
+     "chemin": "01-modeles/glossaire.md",
+     "titre": "Glossaire - Modèles"
+    }
+   ],
+   "fiches": [
+    {
+     "chemin": "01-modeles/fiches/2026-11-12_sorties-du-9-novembre.md",
+     "titre": "sorties du 9 novembre",
+     "date": "2026-11-12",
+     "type": "primaire",
+     "fiabilite": "haute",
+     "tags": [
+      "version",
+      "tarification"
+     ],
+     "lien": "",
+     "resume": "Les release notes datent au 9 novembre 2026 l'arrivée de deux modèles, Fable 5.2 et Mythos 5.2, mais la liste officielle des modèles lue le même jour n'en montre qu'un."
+    }
+   ]
+  },
+  {
+   "dossier": "02-skills",
+   "titre": "Skills",
+   "membre": "Brice Ramette",
+   "pages": [
+    {
+     "chemin": "02-skills/synthese.md",
+     "titre": "Synthèse - Skills"
+    },
+    {
+     "chemin": "02-skills/sources.md",
+     "titre": "Sources suivies - Skills"
+    },
+    {
+     "chemin": "02-skills/glossaire.md",
+     "titre": "Glossaire - Skills"
+    }
+   ],
+   "fiches": []
+  },
+  {
+   "dossier": "03-agents",
+   "titre": "Agents",
+   "membre": "Quentin Affholder",
+   "pages": [
+    {
+     "chemin": "03-agents/synthese.md",
+     "titre": "Synthèse - Agents"
+    },
+    {
+     "chemin": "03-agents/sources.md",
+     "titre": "Sources suivies - Agents"
+    },
+    {
+     "chemin": "03-agents/glossaire.md",
+     "titre": "Glossaire - Agents"
+    }
+   ],
+   "fiches": []
+  },
+  {
+   "dossier": "04-claude-code",
+   "titre": "Claude Code",
+   "membre": "Marin Jabet",
+   "pages": [
+    {
+     "chemin": "04-claude-code/synthese.md",
+     "titre": "Synthèse - Claude Code"
+    },
+    {
+     "chemin": "04-claude-code/sources.md",
+     "titre": "Sources suivies - Claude Code"
+    },
+    {
+     "chemin": "04-claude-code/glossaire.md",
+     "titre": "Glossaire - Claude Code"
+    }
+   ],
+   "fiches": []
+  },
+  {
+   "dossier": "05-mcp",
+   "titre": "MCP",
+   "membre": "Nathan Le Biez",
+   "pages": [
+    {
+     "chemin": "05-mcp/synthese.md",
+     "titre": "Synthèse - MCP"
+    },
+    {
+     "chemin": "05-mcp/sources.md",
+     "titre": "Sources suivies - MCP"
+    },
+    {
+     "chemin": "05-mcp/glossaire.md",
+     "titre": "Glossaire - MCP"
+    }
+   ],
+   "fiches": []
+  }
+ ],
+ "total_fiches": 1
+}
